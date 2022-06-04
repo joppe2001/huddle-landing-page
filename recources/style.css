@@ -72,7 +72,7 @@
             align-items: center;
             height: 100%;
             width: 100%;
-            margin: 0 2.5vh;
+            margin: 0 2.5vh 0 2.5vh;
             transition: ease 0.3s;
         }
         
@@ -134,6 +134,7 @@
         .icon-box {
             display: flex;
             justify-content: flex-end;
+            margin: 0 2.5% 2.5% 0;
         }
         
         .icon {
@@ -241,6 +242,7 @@
             .left-container {
                 height: 15%;
             }
+            /* text */
             .text {
                 font-size: 1.6vh;
                 max-height: 80%;
