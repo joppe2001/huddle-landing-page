@@ -1,0 +1,248 @@
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        /* root */
+        
+         :root {
+            --Violet-: hsl(257, 40%, 49%);
+            --Sft-magenta: hsl(300, 69%, 71%);
+        }
+        /* the grander parts of the page */
+        
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        
+        html {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            /* font-size: 15px; */
+            height: 100vh;
+            font-family: 'Open sans';
+            font-weight: 400;
+            background: url('../images/bg-desktop.svg') no-repeat center center fixed;
+            background-color: var(--Violet-);
+            background-size: cover;
+            color: white;
+            margin: 0;
+        }
+        
+        h1 {
+            font-family: 'Poppins';
+            font-weight: 600;
+        }
+        /* header */
+        
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0 auto;
+            height: 15%;
+            width: 100%;
+            padding-left: 5vh;
+            transition: 1.3s;
+        }
+        
+        header img {
+            height: 50%;
+        }
+        
+        header:hover {
+            padding-left: 75vh;
+        }
+        /* main section */
+        
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            height: 75%;
+        }
+        /* left container  */
+        
+        .left-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            margin: 0 2.5vh;
+            transition: ease 0.3s;
+        }
+        
+        .left-container img {
+            max-height: 100%;
+        }
+        /* right -container */
+        
+        .right-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .text {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-size: min(1.5vw, 1rem);
+        }
+        
+        .text h1 {
+            width: 55%;
+        }
+        
+        .text p {
+            width: 60%;
+        }
+        
+        .text button {
+            font-family: 'Poppins';
+            width: min(10vw, 10rem);
+            padding: 1.2% 3%;
+            border-radius: 25px;
+            border: none;
+            box-shadow: 2px 4px 5px rgb(69, 68, 68);
+            font-size: min(1.5vw, 1rem);
+            color: var(--Violet-);
+            transition: ease-out 0.3s;
+        }
+        
+        .text button:hover {
+            background-color: var(--Violet-);
+            color: white;
+        }
+        /* icons footer */
+        
+        .footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 10%;
+            width: 100%;
+        }
+        
+        .icon-box {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .icon {
+            display: inline-block;
+            width: min(1.9vw, 3rem);
+            height: min(1.9vw, 3rem);
+            stroke-width: 0;
+            stroke: currentColor;
+            fill: currentColor;
+            transition: ease 0.4s;
+        }
+        
+        .icons:hover {
+            color: red;
+            border: 0.2vh solid red;
+        }
+        
+        .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.5%;
+            border-radius: 50%;
+            border: 0.2vh solid white;
+            padding: 1vh;
+            transition: ease 0.4s;
+        }
+        /* media querry */
+        
+        @media screen and (max-width:900px) {
+            html {
+                margin: 0;
+            }
+            body {
+                height: 100vh;
+                width: 100vw;
+                background-image: url('../images/bg-mobile.svg');
+                background-size: cover;
+                margin: 0 auto;
+            }
+            /* header */
+            header {
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+            }
+            header {
+                pointer-events: none;
+            }
+            /* main */
+            main {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            .left-container {
+                width: 100%;
+                height: 50%;
+                margin: 0 auto;
+            }
+            .text {
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                font-size: 2vh;
+            }
+            .text button {
+                width: min(12vw, 8rem);
+            }
+            .text h1 {
+                width: 70%;
+            }
+            /* footer */
+            .icon-box {
+                padding: 2% 0 0 0;
+                justify-content: center;
+            }
+        }
+        
+        @media screen and (max-width:600px) {
+            .left-container {
+                height: 40%;
+            }
+            .text {
+                font-size: max(1.2vw, 1rem);
+                max-height: 80%;
+            }
+        }
+        
+        @media screen and (max-width:380px) {
+            .left-container {
+                height: 20%;
+            }
+            .text {
+                font-size: 1.9vh;
+                max-height: 80%;
+            }
+        }
+        
+        @media screen and (max-width:320px) {
+            .left-container {
+                height: 15%;
+            }
+            .text {
+                font-size: 1.6vh;
+                max-height: 80%;
+            }
+        }
